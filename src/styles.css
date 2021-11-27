@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+#searchBar {
+  text-align: center;
+}
+
+#meteo-jour {
+  text-align: center;
+}
+
+#prevision{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

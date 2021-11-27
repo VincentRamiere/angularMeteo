@@ -1,0 +1,22 @@
+<div *ngFor = "let i of meteoJour">
+
+    <div id="meteo-jour">
+
+      <p>Nom de la ville : <span id="nomVille">{{ i.city_info.name }}</span></p>
+      <p>Date : <span id="date">{{ i.current_condition.date}}</span></p>
+      <p>Température : <span id="temp"></span>{{i.current_condition.tmp}}°C</p>
+      <img src="{{i.current_condition.icon}}" alt="" id="iconPrevision">
+      <br>
+      <br>
+      <p>Prévision : </p>
+
+    </div>
+    <div id="prevision">
+
+      <app-meteo-suivant [meteoSuivant] = 'i.fcst_day_1'></app-meteo-suivant>
+      <app-meteo-suivant [meteoSuivant] = 'i.fcst_day_2'></app-meteo-suivant>
+      <app-meteo-suivant [meteoSuivant] = 'i.fcst_day_3'></app-meteo-suivant>
+
+    </div>
+</div>
+
